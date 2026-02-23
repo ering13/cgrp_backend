@@ -3,6 +3,9 @@
 from sqlalchemy import Column, BigInteger, Boolean, Text
 from sqlalchemy.orm import relationship
 from backend.app.database import Base
+from backend.app.models.user_roles import UserRole
+from backend.app.models.roles import Role
+
 
 class User(Base):
     __tablename__ = "users"
@@ -13,6 +16,11 @@ class User(Base):
     first_name = Column(Text)
     last_name = Column(Text)
     password = Column(Text)
+    roles = relationship(
+        "Role",
+        secondary=UserRole.__table__,
+        backref="users"
+    )
 
     device_data = relationship("DeviceData", back_populates="user", cascade="all, delete")
     symptoms = relationship("UserSymptoms", back_populates="user", cascade="all, delete")
