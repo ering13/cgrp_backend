@@ -3,18 +3,18 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.app.database import get_db
-from backend.app.schemas.device_data import DeviceDataCreate
-from backend.app.schemas.user_symptoms import SymptomCreate
-from backend.app.schemas.users import UserCreate
-from backend.app.crud.device_data import create_device_data
-from backend.app.crud.user_symptoms import create_symptom_data
-from backend.app.crud.users import create_user
-from backend.app.models.user_symptoms import UserSymptoms
-from backend.app.models.device_data import DeviceData
-from backend.app.models.users import User
+from app.database import get_db
+from app.schemas.device_data import DeviceDataCreate
+from app.schemas.user_symptoms import SymptomCreate
+from app.schemas.users import UserCreate
+from app.crud.device_data import create_device_data
+from app.crud.user_symptoms import create_symptom_data
+from app.crud.users import create_user
+from app.models.user_symptoms import UserSymptoms
+from app.models.device_data import DeviceData
+from app.models.users import User
 from fastapi import APIRouter, WebSocket, Query
-from backend.app.utils.ws_manager import manager
+from app.utils.ws_manager import manager
 from fastapi import BackgroundTasks
 
 router = APIRouter()
