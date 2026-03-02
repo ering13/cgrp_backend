@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, BigInteger, ForeignKey
-from .database import Base
+from app.database import Base
 
 class UserRole(Base):
     __tablename__ = "user_roles"
