@@ -3,8 +3,8 @@
 from sqlalchemy import Column, BigInteger, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from app.database import Base
-from .users import User
-from .user_symptoms import UserSymptoms
+from app.models.users import User
+from app.models.user_symptoms import UserSymptoms
 
 class DeviceData(Base):
     __tablename__ = "device_data"

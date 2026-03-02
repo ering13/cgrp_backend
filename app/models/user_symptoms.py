@@ -4,7 +4,7 @@ from sqlalchemy import Column, BigInteger, Boolean, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import JSONB
 from app.database import Base
-from .users import User
+from app.models.users import User
 
 
 class UserSymptoms(Base):

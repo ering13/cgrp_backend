@@ -3,8 +3,8 @@
 from sqlalchemy import Column, BigInteger, Boolean, Text
 from sqlalchemy.orm import relationship
 from app.database import Base
-from .models.user_roles import UserRole
-from .models.roles import Role
+from app.models.user_roles import UserRole
+from app.models.roles import Role
 
 
 class User(Base):

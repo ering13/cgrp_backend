@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from sqlalchemy.orm import Session
-from .models.roles import Role
-from .models.user_roles import UserRole
+from app.models.roles import Role
+from app.models.user_roles import UserRole
 
 def assign_role(db: Session, user_id: int, role_name: str):
     role = db.query(Role).filter(Role.name == role_name).first()
