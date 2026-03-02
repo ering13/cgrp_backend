@@ -2,9 +2,9 @@
 
 from fastapi import FastAPI
 
-import backend.app.models
+import app.models
 
-from backend.app.api.routes import router
+from app.api.routes import router
 
 app = FastAPI(
     title="CGRP App Backend",

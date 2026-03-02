@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy.orm import Session
-from backend.app.models.users import User
+from app.models.users import User
 
 def create_user(db: Session, data):
     item = User(**data.dict())

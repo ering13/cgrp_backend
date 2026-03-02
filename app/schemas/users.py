@@ -3,7 +3,8 @@
 from pydantic import BaseModel
 
 from typing import List
-from backend.app.schemas.roles import RoleOut
+from app.schemas.roles import RoleOut
+
 
 
 
@@ -17,4 +18,5 @@ class UserCreate(BaseModel):
     roles: List[RoleOut] = []
 
     class Config:
+
         from_attributes = True

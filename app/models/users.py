@@ -2,9 +2,9 @@
 
 from sqlalchemy import Column, BigInteger, Boolean, Text
 from sqlalchemy.orm import relationship
-from backend.app.database import Base
-from backend.app.models.user_roles import UserRole
-from backend.app.models.roles import Role
+from .database import Base
+from .models.user_roles import UserRole
+from .models.roles import Role
 
 
 class User(Base):

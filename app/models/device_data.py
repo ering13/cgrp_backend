@@ -2,7 +2,7 @@
 
 from sqlalchemy import Column, BigInteger, Float, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from backend.app.database import Base
+from app.database import Base
 from .users import User
 from .user_symptoms import UserSymptoms
 
